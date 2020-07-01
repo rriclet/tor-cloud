@@ -2,7 +2,7 @@ version: '3'
 
 services:
   onionize:
-    image: torservers/onionize
+    image: rriclet/onionize:arm32v7
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
