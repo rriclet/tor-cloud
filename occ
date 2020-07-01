@@ -1,6 +1,13 @@
 #! /bin/bash
 
-alias occ="runuser --user www-data -- /var/www/html/occ"
+apt update 
+
+echo 'alias ll="ls -al"' >> ~/.bashrc
+echo 'alias occ="runuser --user www-data -- /var/www/html/occ"' >> ~/.bashrc
+
 occ app:install calendar
+occ config:system:get skeletondirectory
+
+# occ user:add xxx 
 occ group:add team
 
