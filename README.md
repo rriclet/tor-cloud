@@ -9,7 +9,7 @@ docker-compose up -d
 
 2. L'accès à Nextcloud est ensuite disponible à l'adresse fournie par la commande :
 ```
-docker exec rer_onionize_1 cat /var/lib/tor/onion_services/rer/hostname
+docker exec app_onionize_1 cat /var/lib/tor/onion_services/app/hostname
 ```
 
 3. Créer un compte admin
