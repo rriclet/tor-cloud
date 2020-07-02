@@ -4,9 +4,13 @@ apt update
 
 echo 'alias ll="ls -al"' >> ~/.bashrc
 echo 'alias occ="runuser --user www-data -- /var/www/html/occ"' >> ~/.bashrc
+source ~/.bashrc
 
 occ app:install calendar
-occ config:system:get skeletondirectory
+occ app:install groupfolders
+
+occ config:system:set --value "" skeletondirectory
+occ config:app:set --value "100 MB" files default_quota
 
 # occ user:add xxx 
 occ group:add team
