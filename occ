@@ -12,6 +12,6 @@ occ app:install groupfolders
 occ config:system:set --value "" skeletondirectory
 occ config:app:set --value "100 MB" files default_quota
 
-# occ user:add xxx 
-occ group:add team
-
+export OC_PASS=changethepassword
+occ group:add <group>
+occ user:add <user> --password-from-env --group="<group>" 
