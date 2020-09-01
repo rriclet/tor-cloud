@@ -7,6 +7,7 @@ echo 'alias occ="runuser --user www-data -- /var/www/html/occ"' >> ~/.bashrc
 source ~/.bashrc
 
 occ app:install calendar
+occ app:install ojsxc
 
 occ config:system:set --value "" skeletondirectory
 occ config:app:set --value "100 MB" files default_quota
