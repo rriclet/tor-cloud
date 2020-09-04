@@ -3,7 +3,7 @@
 apt update 
 
 echo 'alias ll="ls -al"' >> ~/.bashrc
-echo 'alias occ="runuser --user www-data -- /var/www/html/occ"' >> ~/.bashrc
+echo 'alias occ="runuser --user www-data -- /var/www/html/occ"' >> ~/.bashrc 
 echo 'export OC_PASS=changethepassword' >> ~/.bashrc
 source ~/.bashrc
 
@@ -13,5 +13,10 @@ occ app:install spreed
 occ config:system:set --value "" skeletondirectory
 occ config:app:set --value "100 MB" files default_quota
 
+# Useful commands 
+
 occ group:add <group>
 occ user:add <user> --password-from-env --group="<group>" 
+occ user:resetpassword --password-from-env <user>
+
+alias lastseen='for u in $(occ user:list | cut -d':' -f 2); do occ user:lastseen $u; done'
