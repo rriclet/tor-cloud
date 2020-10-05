@@ -16,7 +16,7 @@ https://www.instructables.com/Install-and-Setup-Raspbian-Lite-on-Raspberry-Pi-3/
 
 2. Modifier la variable d'environement `ONIONSERVICE_NAME` par le nom de votre groupe d'ami.e.s dans le fichier `docker-compose.yaml`.
 
-3. Installer docker-compose et lancer la commande dans le dossier où se trouve le ficher `docker-compose.yaml` 
+3. Lancer la commande dans le dossier où se trouve le ficher `docker-compose.yaml` 
 ```
 docker-compose up -d
 ```
@@ -26,7 +26,7 @@ docker-compose up -d
 docker exec app_onionize_1 cat /var/lib/tor/onion_services/app/hostname
 ```
 
-5. Créer un compte admin
+5. Aller sur la page de connexion à Nextcloud en utilisant Tor et créer un compte admin
 
 6. Sélectionner MariaDb, renseigner les identifiants présents dans `docker-compose.yaml` (l'hôte à renseigner est `db`, comme le nom du service)
 
