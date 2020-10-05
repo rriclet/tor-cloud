@@ -7,6 +7,7 @@ Ce projet a but pour d'être installé sur un Raspberry Pi.
 Tutoriel d'installation de Raspbian Lite OS et activation de SSH :
 https://www.instructables.com/Install-and-Setup-Raspbian-Lite-on-Raspberry-Pi-3/
 
+- Accédez au bash de votre Raspberry avec SSH via votre réseau local (le Raspberry doit être connecté à votre box)
 - Installez `git`, `docker` ainsi que `docker-compose` sur votre Raspberry.
 - Ajoutez un stockage via USB à votre Raspberry (clé USB, disque dur externe...)
 
