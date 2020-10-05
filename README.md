@@ -26,7 +26,7 @@ docker-compose up -d
 docker exec app_onionize_1 cat /var/lib/tor/onion_services/app/hostname
 ```
 
-5. Go to the Nextcloud webpage and create an admin account 
+5. Go to the Nextcloud webpage using Tor and create an admin account 
 
 6. Select MariaDb, fill the form with credentials found in `docker-compose.yaml` (the databse host is `db`, the Docker service name)
 
