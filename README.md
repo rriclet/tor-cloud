@@ -1,38 +1,40 @@
+[Français](https://github.com/rriclet/tor-cloud/blob/master/README.fr.md) 👈
+
 # Introduction 
 
-Ce projet a but pour d'être installé sur un Raspberry Pi.
+This project is meant to be installed on a Raspberry Pi.
 
-Tutoriel d'installation de Raspbian Lite OS et activation de SSH :
+Raspbian Lite OS installation tutorial & SSH activation :
 https://www.instructables.com/Install-and-Setup-Raspbian-Lite-on-Raspberry-Pi-3/
 
-- Installez `git`, `docker` ainsi que `docker-compose` sur votre Raspberry.
-- Ajoutez un stockage via USB à votre Raspberry (clé USB, disque dur externe...)
+- Install `git`, `docker` as well as `docker-compose` on your Raspberry.
+- Add an external USB storage to your Raspberry (USB flash drive, external hard drive...)
 
-# Installation du projet
+# Prject installation
 
-1. Faites un `git clone` de ce projet dans un dossier de votre Raspberry (par exemple dans `/media/foo/`) 
+1. `git clone` this project in a folder on your Raspberry (for example in `/media/foo/`) 
 
-2. Modifier la variable d'environement `ONIONSERVICE_NAME` par le nom de votre groupe d'ami.e.s dans le fichier `docker-compose.yaml`.
+2. Edit the `ONIONSERVICE_NAME` environment variable with the name of your team in the file `docker-compose.yaml`.
 
-3. Installer docker-compose et lancer la commande dans le dossier où se trouve le ficher `docker-compose.yaml` 
+3. Run this command in the folder where the `docker-compose.yaml` file is located 
 ```
 docker-compose up -d
 ```
 
-4. Le nom de domaine pour accéder à Nextcloud est ensuite disponible à l'adresse fournie par la commande suivante :
+4. The .onion domain name to access Nextcloud is given by this command :
 ```
 docker exec app_onionize_1 cat /var/lib/tor/onion_services/app/hostname
 ```
 
-5. Créer un compte admin
+5. Go to the Nextcloud webpage and create an admin account 
 
-6. Sélectionner MariaDb, renseigner les identifiants présents dans `docker-compose.yaml` (l'hôte à renseigner est `db`, comme le nom du service)
+6. Select MariaDb, fill the form with credentials found in `docker-compose.yaml` (the databse host is `db`, the Docker service name)
 
-# Fonctionnalités basiques
+# Basic functionalities
 
 https://docs.nextcloud.com/server/19/admin_manual/configuration_files/encryption_configuration.html
 
 https://www.techrepublic.com/article/how-to-create-a-group-calendar-in-nextcloud/
 
-Image utilisée pour le service caché Tor : https://github.com/torservers/onionize-docker  
-(l'architecture `armhf` n'est pas disponible sur Docker Hub, c'est pourquoi j'ai créé manuellement l'image utilisée dans le `docker-compose.yaml`) 
+Image used for the Tor hidden service : https://github.com/torservers/onionize-docker  
+(the `armhf` architecture is not available on Docker Hub, that's why I manually created the image used in `docker-compose.yaml`) 
