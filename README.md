@@ -8,6 +8,7 @@ Raspbian Lite OS installation tutorial & SSH activation :
 https://www.instructables.com/Install-and-Setup-Raspbian-Lite-on-Raspberry-Pi-3/
 
 - Access your Raspberry's bash with SSH using your local network (the Raspberry should be connected to your router)
+- Do this : https://raspi.tv/2012/how-to-set-up-keys-and-disable-password-login-for-ssh-on-your-raspberry-pi
 - Install `git`, `docker` as well as `docker-compose` on your Raspberry.
 - Add an external USB storage to your Raspberry (USB flash drive, external hard drive...)
 
